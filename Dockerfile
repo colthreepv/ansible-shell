@@ -7,5 +7,5 @@ RUN apk add -q --no-cache \
   # extensions that are needed in some playbooks
   curl rsync py-netaddr
 COPY ./files/.bashrc /root/
-ENTRYPOINT [ "bash" ]
+ENTRYPOINT [ "sh" ]
 CMD []
