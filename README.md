@@ -4,13 +4,12 @@ ansible-shell
 [![Docker Pulls](https://img.shields.io/docker/pulls/colthreepv/ansible-shell.svg?style=for-the-badge&maxAge=600)]()  
 
 This docker image let's you execute an [Ansible][3] control container with Bash  
-Refer to [williamyeh/ansible][1] for [all possible settings][2]
 
 [1]: https://github.com/William-Yeh/docker-ansible
 [2]: https://github.com/William-Yeh/docker-ansible#for-the-impatient
 [3]: http://docs.ansible.com/ansible/latest/index.html
 
-**Automatically updated when `williamyeh/ansible` changes**
+**Automatically updated when `bash:5` changes**
 
 # Example usage
 Start Ansible shell using files in your current directory:  

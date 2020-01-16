@@ -1,11 +1,9 @@
-FROM williamyeh/ansible:alpine3
-ENV COMPLETION_URL=https://api.github.com/repos/dysosmus/ansible-completion/tarball
-ENV COMPLETION_DIR=/etc/bash.completion.d
+FROM bash:5
 
 RUN apk add -q --no-cache \
-  bash bash-completion \
+  ansible \
   # extensions that are needed in some playbooks
-  curl rsync py-netaddr
-COPY ./files/.bashrc /root/
-ENTRYPOINT [ "sh" ]
-CMD []
+  curl rsync py-netaddr \
+  && rm -f /tmp/* /etc/apk/cache/* \
+  # enable color prompt
+  && mv /etc/profile.d/color_prompt /etc/profile.d/color_prompt.sh
